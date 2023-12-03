@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="login-screen">
+        <h1>Login</h1>
+        <button onclick="showSignIn()">Sign In</button>
+        <button onclick="showRegistration()">Register</button>
+    </div>
+
+    <div id="sign-in-screen" style="display: none;">
+        <h1>Sign In</h1>
+        <form id="sign-in-form">
+            <div class="form-group">
+                <label for="signInEmail">Email:</label>
+                <input type="email" id="signInEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="signInPassword">Password:</label>
+                <input type="password" id="signInPassword" required>
+            </div>
+            <button type="button" onclick="signIn()">Sign In</button>
+        </form>
+    </div>
+
+    <div id="registration-screen" style="display: none;">
+        <h1>Registration</h1>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="userName">User Name:</label>
+                <input type="text" id="userName" required>
+            </div>
+            <div class="form-group">
+                <label for="userSurname">User Surname:</label>
+                <input type="text" id="userSurname" required>
+            </div>
+            <div class="form-group">
+                <label for="userDateOfBirth">Date of Birth:</label>
+                <input type="date" id="userDateOfBirth" required>
+            </div>
+            <div class="form-group">
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="userPassword">Password:</label>
+                <input type="password" id="userPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+            <button type="button" onclick="registerUser()">Register</button>
+        </form>
+    </div>
+
+    <div id="user-info-screen" style="display: none;">
+        <h1>User Information</h1>
+        <div id="user-info"></div>
+        <button onclick="deleteAccount()">Delete Account</button>
+        <button onclick="leaveAccount()">Leave Account</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
